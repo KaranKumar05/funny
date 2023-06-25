@@ -56,7 +56,7 @@
         margin-top: 1em;
     }
     .main-greet {
-      height: 100vh;
+      /* height: 100vh; */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -86,9 +86,11 @@
         let good = document.querySelector("#good");
         let bad = document.querySelector("#bad");
         let body = document.querySelector(".body");
+        let main_greet = document.querySelector(".main-greet");
         greet.style.display = "block";
         body.style.display = "none";
         good.style.display = "none";
+        main_greet.style.height = "100vh"
         if (name == "karan" || name == "alpha" || name == "karank" || name == "karan ") {
           good.style.display = "block";
           bad.style.display = "none";
