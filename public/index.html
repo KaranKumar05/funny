@@ -72,10 +72,11 @@
     </div>
     <div class="main-greet">
       <div class="greet">
-        <h1>Conguratlation</h1>
+        <h1 id="head">Conguratlation</h1>
         <h2 id="name_2"></h2>
         <h2 id="bad">Verified CHAWAL</h2>
         <h2 id="good">Good Boy</h2>
+        <h2 id="phopho">Phopho is not a Name</h2>
       </div>
     </div>
 
@@ -85,17 +86,29 @@
         let greet = document.querySelector(".greet");
         let good = document.querySelector("#good");
         let bad = document.querySelector("#bad");
+        let phopho = document.querySelector("#phopho");
         let body = document.querySelector(".body");
         let main_greet = document.querySelector(".main-greet");
         greet.style.display = "block";
         body.style.display = "none";
+        phopho.style.display = "none";
         good.style.display = "none";
         main_greet.style.height = "100vh"
-        if (name == "karan" || name == "alpha" || name == "karank" || name == "karan " || name == "phopho") {
+        if (name == "karan" || name == "alpha" || name == "karank" || name == "karan ") {
+          phopho.style.display = "none";
           good.style.display = "block";
           bad.style.display = "none";
           let p_name = (document.querySelector("#name_2").innerHTML = name.toUpperCase());
-        }else{
+        }else if(name == "phopho"){
+          let head = document.querySelector('#head');
+          phopho.style.display = "block";
+          head.style.display = "none";
+          good.style.display = "none";
+          bad.style.display = "none";
+          let p_name = (document.querySelector("#name_2").innerHTML = name.toUpperCase());
+
+        }
+        else{
             let p_name = (document.querySelector("#name_2").innerHTML = name.toUpperCase());
         }
       });
