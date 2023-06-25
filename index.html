@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Just Do it</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom, black, white);
+      row-gap: 1em;
+    }
+    input {
+      padding: 1em;
+      border-radius: 10px;
+      border: none;
+    }
+    button {
+      padding: 2vh 5vh;
+      font-size: 1.3em;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      background-color: rgb(21, 203, 203);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }
+    .greet {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* height: 100vh; */
+      text-align: center;
+      width: 20em;
+      background-color: rgba(255, 0, 0, 0.943);
+      padding: 3em;
+      border-radius: 20px;
+      margin: auto;
+      color: white;
+    }
+    .greet h1 {
+      border-bottom: 2px solid white;
+    }
+    .greet h2 {
+        margin-top: 1em;
+    }
+    .main-greet {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, black, white);
+    }
+  </style>
+  <body>
+    <div class="body">
+      <div>
+        <input type="text" id="name" placeholder="Enter Your Name" maxlength="6" required/>
+      </div>
+      <button id="btn">Greatings</button>
+    </div>
+    <div class="main-greet">
+      <div class="greet">
+        <h1>Conguratlation</h1>
+        <h2 id="name_2"></h2>
+        <h2 id="bad">Verified CHAWAL</h2>
+        <h2 id="good">Good Boy</h2>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector("#btn").addEventListener("click", () => {
+        let name = document.querySelector("#name").value.toLowerCase();
+        let greet = document.querySelector(".greet");
+        let good = document.querySelector("#good");
+        let bad = document.querySelector("#bad");
+        let body = document.querySelector(".body");
+        greet.style.display = "block";
+        body.style.display = "none";
+        good.style.display = "none";
+        if (name == "karan" || name == "alpha" || name == "karank" || name == "karan ") {
+          good.style.display = "block";
+          bad.style.display = "none";
+          let p_name = (document.querySelector("#name_2").innerHTML = name.toUpperCase());
+        }else{
+            let p_name = (document.querySelector("#name_2").innerHTML = name.toUpperCase());
+        }
+      });
+    </script>
+  </body>
+</html>
