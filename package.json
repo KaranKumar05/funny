@@ -2,9 +2,11 @@
   "name": "funny",
   "version": "1.0.0",
   "description": "Created just for fun",
-  "main": "index.html",
+  "main": "index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.mjs",
+    "dev": "nodemon index.mjs"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/KaranKumar05/funny/issues"
   },
-  "homepage": "https://github.com/KaranKumar05/funny#readme"
+  "homepage": "https://github.com/KaranKumar05/funny#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
 }
